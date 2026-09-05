@@ -1,0 +1,13 @@
+azure-functions
+azure-functions-durable
+azure-identity
+azure-storage-blob
+azure-search-documents>=11.5.1
+azure-cosmos
+llama-index-core
+llama-index-readers-file
+llama-index-embeddings-azure-openai
+llama-index-vector-stores-azureaisearch
+llama-index-storage-docstore-redis
+llama-index-storage-kvstore-redis
+redis
