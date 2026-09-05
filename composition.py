@@ -1,5 +1,6 @@
-"""The composition root. Nothing outside this file and function_app.py is
-allowed to import from `infrastructure` directly."""
+"""The composition root — the one place in the whole project (besides
+function_app.py) where concrete infrastructure classes get wired into the
+abstract ports the use case expects."""
 from functools import lru_cache
 
 from application.use_cases import ProcessBlobEventUseCase
@@ -29,4 +30,5 @@ def build_use_case() -> ProcessBlobEventUseCase:
         database_name=settings.cosmos_db_name,
         container_name=settings.cosmos_container_name,
     )
+
     return ProcessBlobEventUseCase(source=source, indexer=indexer, audit=audit)
